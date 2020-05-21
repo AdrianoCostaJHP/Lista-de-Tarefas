@@ -1,0 +1,114 @@
+*{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  
+  
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(228, 160, 172);
+}
+
+.container {
+  margin-top: 100px;
+  background-color: lightblue;
+  width: 100%;
+  max-width: 300px;
+  height:100%;
+  max-height: 400px;
+  border-radius: 8px;
+  padding: 10px 20px ;
+ 
+}
+
+
+.container #lista #hgroup {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  padding: 5px 8px 10px;
+  
+}
+
+.container #lista #hgroup ul{
+  list-style-type: none;
+}
+
+.container #lista #hgroup #verification{
+  margin-right: 10px;
+  transition: color 0.5s;
+  width: 18px;
+  height: 18px;
+  
+}
+.container #lista #hgroup #verification:hover{
+  color: rgb(44, 241, 44);
+}
+
+.container .header {
+  display: flex;
+  align-items: center;
+}
+.container .header a{
+  padding: 0;
+  text-decoration: none;
+}
+
+.container .header h1{
+  margin:10px 15px 15px ;
+}
+
+.container .header a #add {
+  width: 25px;
+  height: 25px; 
+  padding: 0px; 
+  color: rgb(68, 65, 65);
+  transition: color 0.3s;
+  
+}
+
+.container .header a #add:hover{
+  color:black;
+}
+
+.container section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container section #textItem {
+  width: 100%;
+  max-width: 200px;
+  height: 20px;
+  border-radius: 8px;
+  border: none;
+  padding: 10px;
+  margin:10px 10px 10px 0;
+  font-size: 15px;
+
+}
+
+.container section #textItem:focus{
+  width: 300px;
+  border: 1px  rgb(12, 128, 156);
+}
+
+
+.container section button{
+  width: 100%;
+  max-width: 100px;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+  background-color: rgb(68, 65, 65);
+  color: white;
+  transition: background-color 0.3s;
+}
+.container section button:hover {
+  background-color: black;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/style.css"/>
+  <script src="https://kit.fontawesome.com/1bb42803ef.js" crossorigin="anonymous"></script>
+  <title>Lista de Tarefas</title>
+
+</head>
+<body onload="exibir()">
+  
+  
+  <div class="container">
+    <div class="header">
+      <h1>Lista de Tarefas</h1>
+    
+      <a href="#"><i onclick="const input = document.getElementById('adicionarTarefa').style.display = 'flex' " id="add"class="fas fa-plus-circle"></i></a>
+    </div>
+      <ul id="lista">
+       
+      </ul>
+
+    <section id="adicionarTarefa" style="display: none;">
+      <input type="text" placeholder="Nova Tarefa" id="textItem">
+      <button onclick="const input = document.getElementById('adicionarTarefa').style.display = 'none'; adicionar()">ADICIONAR</button>
+    </section>
+  </div>
+  <script src="/js/Lista.js"></script>
+</body>
+</html>
