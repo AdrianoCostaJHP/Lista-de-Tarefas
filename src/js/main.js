@@ -1,46 +1,45 @@
-var textItem = document.getElementById('textItem');
-var div = document.getElementById("lista");
+var inputElement = document.getElementById('textItem');
+var ulLista = document.getElementById("lista");
 
 
 var lista = JSON.parse(localStorage.getItem('listaTarefas')) || [];
 
 
 function exibir(){
-  div.innerHTML = '';
+  ulLista.innerHTML = '';
 
   for(item of lista){
-    var newP = document.createElement('li');
-    var textP = document.createTextNode(item);
-    newP.style.listStyleType = "none";
+    var containerP = document.createElement('p');
+    var textoP = document.createTextNode(item);
 
-      var link = document.createElement('i');
+      var iconeLista= document.createElement('i');
       
-      link.setAttribute("class", "fas fa-check-circle");
-      link.setAttribute("id", "verification");
+      iconeLista.setAttribute("class", "fas fa-check-circle");
+      iconeLista.setAttribute("id", "icon");
 
-      var pos= lista.indexOf(item);
-      link.setAttribute('onclick', "deletar("+pos+")");
+      var posicao= lista.indexOf(item);
+      iconeLista.setAttribute('onclick', "deletar("+posicao+")");
 
-    var divHgroup = document.createElement('div');
-    divHgroup.setAttribute("id","hgroup");
+    var liLista = document.createElement('li');
+    liLista.setAttribute("id","liContainer");
     
-    divHgroup.appendChild(link);
-    divHgroup.appendChild(newP);
+    liLista.appendChild(iconeLista);
+    liLista.appendChild(containerP);
     
-    newP.appendChild(textP);
-    div.appendChild(divHgroup);
+    containerP.appendChild(textoP);
+    ulLista.appendChild(liLista);
   }
 }
 
 function adicionar(){
-  if(textItem.value == ''){
+  if(inputElement.value == ''){
 
   }
   else{
-    var text = textItem.value;
+    var text = inputElement.value;
     lista.push(text);
 
-    textItem.value = '';
+    inputElement.value = '';
     exibir();
     saveToStorage();
   }
