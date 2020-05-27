@@ -25,26 +25,32 @@ body{
 }
 
 
+.container #lista #liContainer {
   width: 300px;
   display: flex;
   align-items: center;
   justify-content:flex-start;
   padding: 5px 8px 10px;
   
+  
 }
 
-.container #lista #hgroup ul{
+.container #lista #liContainer ul{
   list-style-type: none;
 }
+.container #lista #liContainer p{
+  word-break: keep-all;
+  word-wrap: break-word;
+}
 
-.container #lista #hgroup #verification{
+.container #lista #liContainer #icon{
   margin-right: 10px;
   transition: color 0.5s;
   width: 18px;
   height: 18px;
   
 }
-.container #lista #hgroup #verification:hover{
+.container #lista #liContainer #icon:hover{
   color: rgb(44, 241, 44);
 }
 
